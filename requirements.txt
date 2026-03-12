@@ -9,3 +9,4 @@ tensorflow-hub
 joblib
 soundfile
 setuptools
+wheel
