@@ -68,7 +68,7 @@ def is_noisy(waveform):
     return energy < 1e-4
 
 # ─── UI ────────────────────────────────────────────────────────────────────────
-st.title("🎙️ Deteksi Dini Specific Language Impairment (SLI)")
+st.title("Deteksi Dini Specific Language Impairment (SLI)")
 st.markdown(
     "Upload file audio untuk mendeteksi kemungkinan "
     "adanya gangguan *Specific Language Impairment* (SLI)."
