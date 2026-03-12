@@ -70,7 +70,7 @@ def is_noisy(waveform):
 # ─── UI ────────────────────────────────────────────────────────────────────────
 st.title("🎙️ Deteksi Dini Specific Language Impairment (SLI)")
 st.markdown(
-    "Upload file untuk mendeteksi kemungkinan "
+    "Upload file audio untuk mendeteksi kemungkinan "
     "adanya gangguan *Specific Language Impairment* (SLI)."
 )
 st.divider()
