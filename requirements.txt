@@ -10,3 +10,4 @@ joblib
 soundfile
 setuptools==69.5.1
 packaging
+audioread
