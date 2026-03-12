@@ -75,14 +75,21 @@ st.markdown(
 )
 st.divider()
 
-uploaded_file = st.file_uploader("Upload file audio")
+uploaded_file = st.file_uploader(
+    "Upload Audio",
+    type=["wav","mp3","m4a","ogg","flac"]
+)
 
 if uploaded_file is not None:
-    st.audio(uploaded_file, format="audio/wav")
+    st.audio(uploaded_file)
+    
 
     with st.spinner("Memproses audio..."):
-        # Simpan file sementara
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp:
+        # ambil ekstensi file asli
+        ext = os.path.splitext(uploaded_file.name)[1]
+
+        # simpan file sementara dengan ekstensi yang sama
+        with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp:
             tmp.write(uploaded_file.read())
             tmp_path = tmp.name
 
