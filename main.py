@@ -70,12 +70,12 @@ def is_noisy(waveform):
 # ─── UI ────────────────────────────────────────────────────────────────────────
 st.title("🎙️ Deteksi Dini Specific Language Impairment (SLI)")
 st.markdown(
-    "Upload file audio anak (format **.wav**) untuk mendeteksi kemungkinan "
+    "Upload file untuk mendeteksi kemungkinan "
     "adanya gangguan *Specific Language Impairment* (SLI)."
 )
 st.divider()
 
-uploaded_file = st.file_uploader("Upload file audio (.wav)", type=["wav"])
+uploaded_file = st.file_uploader("Upload file audio")
 
 if uploaded_file is not None:
     st.audio(uploaded_file, format="audio/wav")
