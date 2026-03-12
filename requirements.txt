@@ -5,8 +5,8 @@ librosa
 scikit-learn
 lightgbm
 tensorflow==2.15.0
-tensorflow-hub
+tensorflow-hub==0.16.1
 joblib
 soundfile
 setuptools
-wheel
+packaging
