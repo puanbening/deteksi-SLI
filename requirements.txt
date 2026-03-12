@@ -1,8 +1,9 @@
-streamlit>=1.32.0
-numpy<2.0
+streamlit
+numpy==1.26.4
+pandas
 librosa
-lightgbm
-joblib
-tensorflow-cpu==2.15.0
-tensorflow-hub==0.16.1
 scikit-learn
+lightgbm
+tensorflow==2.15.0
+tensorflow-hub
+joblib
