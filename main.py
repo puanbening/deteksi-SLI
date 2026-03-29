@@ -77,7 +77,7 @@ st.divider()
 
 uploaded_file = st.file_uploader(
     "Upload Audio",
-    type=["wav","mp3","m4a","ogg","flac"]
+    type=["wav","mp3"]
 )
 
 if uploaded_file is not None:
@@ -105,12 +105,8 @@ if uploaded_file is not None:
 
                 st.divider()
                 st.subheader("📊 Hasil Deteksi")
-
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.metric("Skor Prediksi", f"{prob:.4f}")
-                with col2:
-                    st.metric("Threshold", f"{optimal_threshold:.4f}")
+                st.metric("Skor Prediksi", f"{prob:.4f}")
+                
 
                 # Tentukan hasil
                 if is_noisy(waveform):
