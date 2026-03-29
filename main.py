@@ -112,12 +112,12 @@ if uploaded_file is not None:
                 if is_noisy(waveform):
                     st.warning("⚠️ **Audio terdeteksi mengandung noise berlebihan.** Hasil deteksi mungkin tidak akurat.")
                 elif prob >= optimal_threshold:
-                    st.success("✅ **Hasil: Sehat (Healthy)**")
-                    st.markdown("Audio anak tidak menunjukkan indikasi gangguan SLI.")
+                    st.success("✅ **Hasil: Sehat**")
+                    st.markdown("Audio tidak menunjukkan indikasi gangguan *Specific Language Impairment*.")
                 else:
-                    st.error("🔴 **Hasil: Terdeteksi SLI**")
+                    st.error("🔴 **Hasil: Terdeteksi *Specific Language Impairment***")
                     st.markdown(
-                        "Audio anak menunjukkan indikasi gangguan *Specific Language Impairment*. "
+                        "Audio menunjukkan indikasi gangguan *Specific Language Impairment*. "
                         "Disarankan untuk berkonsultasi dengan terapis wicara."
                     )
 
