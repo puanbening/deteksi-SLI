@@ -51,17 +51,25 @@ def extract_mfcc_features(chunk, sr=16000, n_mfcc=40):
     return np.concatenate([np.mean(mfcc, axis=1), np.std(mfcc, axis=1)])
 
 def extract_hybrid_features(waveform, sr=16000):
+    # 1. MFCC dari FULL waveform (bukan per chunk)
+    mfcc = librosa.feature.mfcc(y=waveform, sr=sr, n_mfcc=40)
+    mfcc_feat = np.concatenate([
+        np.mean(mfcc, axis=1),
+        np.std(mfcc, axis=1)
+    ])  # 80 dim
+
+    # 2. YAMNet dari chunk
     chunks = chunk_waveform(waveform, sr)
     if not chunks:
         return None
-    hybrid_feats = []
+    yamnet_feats = []
     for chunk in chunks:
         chunk_tf = tf.convert_to_tensor(chunk, dtype=tf.float32)
-        mfcc_feat = extract_mfcc_features(chunk, sr)
         _, embeddings, _ = yamnet_layer(chunk_tf)
-        yamnet_feat = tf.reduce_mean(embeddings, axis=0).numpy()
-        hybrid_feats.append(np.concatenate([mfcc_feat, yamnet_feat]))
-    return np.mean(hybrid_feats, axis=0)
+        yamnet_feats.append(tf.reduce_mean(embeddings, axis=0).numpy())
+    yamnet_feat = np.mean(yamnet_feats, axis=0)  # 1024 dim
+
+    return np.concatenate([mfcc_feat, yamnet_feat])  # 1104 dim
 
 def is_noisy(waveform):
     energy = np.mean(np.square(waveform))
