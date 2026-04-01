@@ -48,7 +48,9 @@ def chunk_waveform(waveform, sr=16000, chunk_duration=0.96):
 
 def extract_mfcc_features(chunk, sr=16000, n_mfcc=40):
     mfcc = librosa.feature.mfcc(y=chunk, sr=sr, n_mfcc=n_mfcc)
-    return np.concatenate([np.mean(mfcc, axis=1), np.std(mfcc, axis=1)])
+    mfcc_mean = np.mean(mfcc, axis=1)
+    mfcc_std  = np.std(mfcc, axis=1)
+    return np.concatenate([mfcc_mean, mfcc_std])
 
 def extract_hybrid_features(waveform, sr=16000):
     # 1. MFCC dari FULL waveform (bukan per chunk)
