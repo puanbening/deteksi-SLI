@@ -19,7 +19,7 @@ st.set_page_config(
 # ─── Load Model & Scaler ───────────────────────────────────────────────────────
 @st.cache_resource
 def load_resources():
-    model = lgb.Booster(model_file="model_lgb.txt")
+    model = lgb.Booster(model_file="model.txt")
     scaler = joblib.load("scaler.pkl")
     with open("threshold.json") as f:
         threshold = json.load(f)["threshold"]
