@@ -36,7 +36,7 @@ Hasil prediksi ditampilkan dalam dua komponen utama:
 * **Label Klasifikasi**, yaitu hasil akhir prediksi yang dihasilkan oleh model.
 
 #### Hasil Sehat
-![Prediksi Sehat](images/healthy-detected.png)
+![Prediksi Sehat](images/health-detected.png)
 
 Apabila model mengklasifikasikan audio sebagai kondisi sehat, skor prediksi akan berada mendekati angka **0**, yang menunjukkan tingkat keyakinan model bahwa subjek tidak mengalami gangguan bahasa. Hasil ditampilkan dengan indikator berwarna hijau dan label **"Hasil: Sehat"**, disertai keterangan bahwa audio tidak menunjukkan indikasi *Specific Language Impairment*.
 
