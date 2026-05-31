@@ -14,7 +14,7 @@ Sistem ini merupakan aplikasi web yang dikembangkan menggunakan Streamlit untuk 
 
 ### Keterbatasan Model
 
-Model yang digunakan dalam sistem ini dilatih menggunakan **dataset LANNA**, yang berisi rekaman suara anak-anak penutur bahasa Ceko. Oleh karena itu, model memiliki keterbatasan berupa **bias linguistik**, sehingga performa deteksi dapat menurun ketika digunakan pada audio dari penutur bahasa selain bahasa Ceko.
+Model yang digunakan dalam sistem ini dilatih menggunakan dataset LANNA, yang berisi rekaman suara anak-anak penutur bahasa Ceko. Oleh karena itu, model memiliki keterbatasan berupa bias linguistik, sehingga performa deteksi dapat menurun ketika digunakan pada audio dari penutur bahasa selain bahasa Ceko.
 
 Perbedaan karakteristik fonologis, intonasi, dan pola akustik antarbahasa dapat memengaruhi kemampuan model dalam mengklasifikasikan kondisi SLI secara akurat. Dengan demikian, hasil prediksi pada audio berbahasa Indonesia maupun bahasa lainnya perlu diinterpretasikan secara hati-hati dan tidak dapat dijadikan sebagai dasar diagnosis klinis.
 
