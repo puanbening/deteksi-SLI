@@ -2,7 +2,7 @@
 
 ## Panduan Penggunaan Streamlit 
 
-Sistem ini menyediakan antarmuka web **Deteksi Dini Specific Language Impairment (SLI)** yang memungkinkan pengguna mengunggah file audio untuk dilakukan skrining awal gangguan bahasa. Pengguna dapat mengunggah file melalui mekanisme **drag and drop** maupun dengan menekan tombol **Upload**.
+Sistem ini merupakan aplikasi web yang dikembangkan menggunakan Streamlit untuk mendeteksi indikasi Specific Language Impairment (SLI)  yang memungkinkan pengguna mengunggah file audio untuk dilakukan skrining awal gangguan bahasa. Pengguna dapat mengunggah file melalui mekanisme **drag and drop** maupun dengan menekan tombol **Upload**.
 
 ### Format File yang Didukung
 
