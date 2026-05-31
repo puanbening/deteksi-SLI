@@ -1,7 +1,7 @@
 # Deteksi Specific Language Impairment
 
 ## Panduan Penggunaan Streamlit 
-
+![Halaman Utama](images/homepage.png)
 Sistem ini merupakan aplikasi web yang dikembangkan menggunakan Streamlit untuk mendeteksi indikasi Specific Language Impairment (SLI)  yang memungkinkan pengguna mengunggah file audio untuk dilakukan skrining awal gangguan bahasa. Pengguna dapat mengunggah file melalui mekanisme **drag and drop** maupun dengan menekan tombol **Upload**.
 
 ### Format File yang Didukung
@@ -24,8 +24,6 @@ Perbedaan karakteristik fonologis, intonasi, dan pola akustik antarbahasa dapat 
 Setelah pengguna mengunggah file, sistem secara otomatis melakukan validasi format file. Apabila file yang diunggah tidak sesuai dengan format yang didukung, seperti file video berekstensi `.mp4`, sistem akan menolak file tersebut dan menampilkan indikator kesalahan. Proses prediksi tidak akan dijalankan hingga pengguna mengunggah file audio yang valid.
 
 ### Proses Prediksi
-![Halaman Utama](images/homepage.png)
-
 Ketika file audio yang diunggah memenuhi ketentuan format, sistem akan secara otomatis memproses audio tanpa memerlukan interaksi tambahan dari pengguna. Selama proses berlangsung, sistem menampilkan pemutar audio (*audio player*) sehingga pengguna dapat memutar ulang file yang telah diunggah.
 
 ### Hasil Prediksi
