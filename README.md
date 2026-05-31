@@ -19,12 +19,13 @@ Model yang digunakan dalam sistem ini dilatih menggunakan **dataset LANNA**, yan
 Perbedaan karakteristik fonologis, intonasi, dan pola akustik antarbahasa dapat memengaruhi kemampuan model dalam mengklasifikasikan kondisi SLI secara akurat. Dengan demikian, hasil prediksi pada audio berbahasa Indonesia maupun bahasa lainnya perlu diinterpretasikan secara hati-hati dan tidak dapat dijadikan sebagai dasar diagnosis klinis.
 
 ### Validasi File
-!(invalid-format.png)
+![Halaman Utama](images/invalid-format.png)
 
 Setelah pengguna mengunggah file, sistem secara otomatis melakukan validasi format file. Apabila file yang diunggah tidak sesuai dengan format yang didukung, seperti file video berekstensi `.mp4`, sistem akan menolak file tersebut dan menampilkan indikator kesalahan. Proses prediksi tidak akan dijalankan hingga pengguna mengunggah file audio yang valid.
 
 ### Proses Prediksi
-!(homepage.png)
+![Halaman Utama](images/homepage.png)
+
 Ketika file audio yang diunggah memenuhi ketentuan format, sistem akan secara otomatis memproses audio tanpa memerlukan interaksi tambahan dari pengguna. Selama proses berlangsung, sistem menampilkan pemutar audio (*audio player*) sehingga pengguna dapat memutar ulang file yang telah diunggah.
 
 ### Hasil Prediksi
@@ -35,9 +36,11 @@ Hasil prediksi ditampilkan dalam dua komponen utama:
 * **Label Klasifikasi**, yaitu hasil akhir prediksi yang dihasilkan oleh model.
 
 #### Hasil Sehat
-!(healthy-detected.png)
+![Prediksi Sehat](images/healthy-detected.png)
+
 Apabila model mengklasifikasikan audio sebagai kondisi sehat, skor prediksi akan berada mendekati angka **0**, yang menunjukkan tingkat keyakinan model bahwa subjek tidak mengalami gangguan bahasa. Hasil ditampilkan dengan indikator berwarna hijau dan label **"Hasil: Sehat"**, disertai keterangan bahwa audio tidak menunjukkan indikasi *Specific Language Impairment*.
 
 #### Hasil Specific Language Impairment (SLI)
-!(sli-detected.png)
+![Prediksi SLI](images/sli-detected.png)
+
 Apabila model mengklasifikasikan audio sebagai kondisi *Specific Language Impairment (SLI)*, skor prediksi akan berada mendekati angka **1**, yang menunjukkan tingkat keyakinan model bahwa subjek terindikasi mengalami gangguan bahasa. Hasil ditampilkan dengan label **"Hasil: Specific Language Impairment (SLI)"** beserta informasi bahwa diperlukan pemeriksaan lebih lanjut oleh tenaga profesional untuk memperoleh diagnosis yang akurat.
