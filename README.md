@@ -10,7 +10,7 @@ Sistem ini merupakan aplikasi web yang dikembangkan menggunakan Streamlit untuk 
 * MP3 (.mp3)
 * Ukuran maksimum file: 200 MB
 
-> **Disclaimer:** Aplikasi ini merupakan alat bantu skrining awal dan bukan pengganti diagnosis klinis. Hasil yang diperoleh sebaiknya dikonsultasikan lebih lanjut kepada tenaga medis atau profesional yang berwenang.
+> **Disclaimer:** Sistem ini merupakan alat bantu skrining awal dan bukan pengganti diagnosis klinis. Hasil yang diperoleh sebaiknya dikonsultasikan lebih lanjut kepada tenaga medis atau profesional yang berwenang.
 
 ### Keterbatasan Model
 
